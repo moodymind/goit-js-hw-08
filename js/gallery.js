@@ -98,11 +98,11 @@ function handleClick(event) {
 
   const clickedImage = event.target.closest(".gallery-image");
 
-  const instance = basicLightbox.create(`
-    <div class="modal">
-    <img src="${clickedImage.dataset.source} alt="${clickedImage.alt}">
-    </div>
-    `);
+  const instance = basicLightbox.create(
+    `
+    <img src="${clickedImage.dataset.source}" alt="${clickedImage.alt}">
+    `
+  );
 
   instance.show();
 }
